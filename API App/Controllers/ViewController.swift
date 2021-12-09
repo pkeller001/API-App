@@ -16,6 +16,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var categoryView: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        categoryView.delegate = self
+        categoryView.dataSource = self
+        fetchData()
+        group.wait()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return catArray.count
     }
@@ -27,17 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        categoryView.delegate = self
-        categoryView.dataSource = self
-        fetchData()
-        group.wait()
-    }
-    
-func tableView(_ tableView: UITableView, didSelectRowAt indexPath:IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath:IndexPath) {
         let entry = catArray[indexPath.row]
         apiArray.removeAll()
         for item in myArray {
@@ -47,13 +45,6 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath:IndexPath) {
         }
         performSegue(withIdentifier: "sequeToAPI", sender: entry)
     }
-/*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let entryVC = segue.destination as? APIViewController {
-            if let entryToBeSent = sender as? catArray[IndexPath] {
-                entryVC.entry = entryToBeSent
-            }
-        }
-    }*/
     
-}
+} /* End of Top Class */
 

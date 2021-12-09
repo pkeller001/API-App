@@ -85,7 +85,6 @@
 		E3657B282747CE5800A9ABED /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E3657B2D2747CF1600A9ABED /* APIInterface.swift */,
 				E3657B2F2747CF4A00A9ABED /* Constants.swift */,
 				E3657B312747D06C00A9ABED /* DataModels.swift */,
 			);
@@ -103,6 +102,7 @@
 		E3657B2A2747CEAB00A9ABED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E3657B2D2747CF1600A9ABED /* APIInterface.swift */,
 				E3657B172747CCB600A9ABED /* ViewController.swift */,
 				E3A9096B274A7B5500D5B7D4 /* APIViewController.swift */,
 				E33E4313274D958E00E7A6C3 /* APIcellDetails.swift */,
