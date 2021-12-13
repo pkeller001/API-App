@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreAPIentry" representedClassName=".CoreAPIentry" syncable="YES" codeGenerationType="class">
+        <attribute name="cAPIcategory" attributeType="String"/>
+        <attribute name="cAPIdesc" attributeType="String"/>
+        <attribute name="cAPIname" attributeType="String"/>
+        <attribute name="cAPIurl" attributeType="String"/>
+        <attribute name="cCORSreqd" optional="YES" attributeType="String"/>
+        <attribute name="cHTTPSreqd" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="cKeyReqd" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LastSaved" representedClassName=".LastSaved" syncable="YES" codeGenerationType="class">
+        <attribute name="lastDate" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="CoreAPIentry" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="LastSaved" positionX="-45" positionY="54" width="128" height="44"/>
+    </elements>
+</model>

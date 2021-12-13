@@ -29,7 +29,7 @@
         <scene sceneID="Ef0-Sn-RG9">
             <objects>
                 <viewController id="XdV-7e-LpY" customClass="ViewController" customModule="API_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hee-LY-cw4">
+                    <view key="view" contentMode="scaleToFill" id="Hee-LY-cw4" customClass="UITableView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -54,12 +54,12 @@
                             <constraint firstItem="7Dm-2u-xzE" firstAttribute="leading" secondItem="4VJ-Ww-Ji5" secondAttribute="leading" id="2jK-fn-R09"/>
                             <constraint firstItem="7Dm-2u-xzE" firstAttribute="top" secondItem="4VJ-Ww-Ji5" secondAttribute="top" id="KhX-JC-6f2"/>
                             <constraint firstItem="4VJ-Ww-Ji5" firstAttribute="trailing" secondItem="7Dm-2u-xzE" secondAttribute="trailing" id="N9w-yQ-9Oq"/>
-                            <constraint firstItem="4VJ-Ww-Ji5" firstAttribute="bottom" secondItem="7Dm-2u-xzE" secondAttribute="bottom" id="s69-WN-hRd"/>
+                            <constraint firstAttribute="bottom" secondItem="7Dm-2u-xzE" secondAttribute="bottom" constant="34" id="NIf-fa-4eu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Categories" id="2dZ-Hu-Ps6"/>
                     <connections>
-                        <outlet property="categoryView" destination="7Dm-2u-xzE" id="cW7-Qz-M8G"/>
+                        <outlet property="categoryView" destination="7Dm-2u-xzE" id="Gi5-7y-ZTF"/>
                         <segue destination="Kz3-oy-jzT" kind="show" identifier="sequeToAPI" id="9Y5-c5-G4P"/>
                     </connections>
                 </viewController>
@@ -71,7 +71,7 @@
         <scene sceneID="PqO-lh-C5J">
             <objects>
                 <viewController title="View Controller" id="Kz3-oy-jzT" customClass="APIViewController" customModule="API_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LdA-UD-Vf3">
+                    <view key="view" contentMode="scaleToFill" id="LdA-UD-Vf3" customClass="UITableView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -169,7 +169,7 @@
     </scenes>
     <resources>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.1803921568627451" green="0.29803921568627451" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

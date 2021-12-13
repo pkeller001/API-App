@@ -23,7 +23,7 @@ class APIViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        navItem.title = "API's for " + apiArray[0].apiCategory
+        navItem.title = "API's for " + apiArray[0].cAPIcategory!
         return apiArray.count
     }
 
@@ -31,8 +31,8 @@ class APIViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         let cell = apiTableView.dequeueReusableCell(withIdentifier: "apiCell", for: indexPath) as! APIcellDetails
         cell.textLabel?.numberOfLines = 0
-        let name = apiArray[indexPath.item].apiName
-        let desc = apiArray[indexPath.item].apiDesc
+        let name = apiArray[indexPath.item].cAPIname
+        let desc = apiArray[indexPath.item].cAPIdesc
         cell.name?.text = name
         cell.desc?.text = desc
         //    cell.textLabel?.text = name + K.hyphen + desc
@@ -40,7 +40,7 @@ class APIViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath:IndexPath) {
-        let entry = apiArray[indexPath.row].siteURL
+        let entry = apiArray[indexPath.row].cAPIurl
         url = entry!
         performSegue(withIdentifier: "sequeToWeb", sender: entry)
         }

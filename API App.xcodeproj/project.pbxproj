@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E33591E92762892600BE1487 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E33591E72762892600BE1487 /* CoreData.xcdatamodeld */; };
 		E33E4314274D958E00E7A6C3 /* APIcellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33E4313274D958E00E7A6C3 /* APIcellDetails.swift */; };
 		E3657B142747CCB600A9ABED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3657B132747CCB600A9ABED /* AppDelegate.swift */; };
 		E3657B162747CCB600A9ABED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3657B152747CCB600A9ABED /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E33591E82762892600BE1487 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		E33E4313274D958E00E7A6C3 /* APIcellDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIcellDetails.swift; sourceTree = "<group>"; };
 		E3657B102747CCB600A9ABED /* API App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "API App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3657B132747CCB600A9ABED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				E3657B2F2747CF4A00A9ABED /* Constants.swift */,
 				E3657B312747D06C00A9ABED /* DataModels.swift */,
+				E33591E72762892600BE1487 /* CoreData.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,8 +105,8 @@
 		E3657B2A2747CEAB00A9ABED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E3657B2D2747CF1600A9ABED /* APIInterface.swift */,
 				E3657B172747CCB600A9ABED /* ViewController.swift */,
+				E3657B2D2747CF1600A9ABED /* APIInterface.swift */,
 				E3A9096B274A7B5500D5B7D4 /* APIViewController.swift */,
 				E33E4313274D958E00E7A6C3 /* APIcellDetails.swift */,
 				E3A9096D274A9D1200D5B7D4 /* WebController.swift */,
@@ -184,6 +187,7 @@
 			files = (
 				E3A9096E274A9D1200D5B7D4 /* WebController.swift in Sources */,
 				E3657B302747CF4A00A9ABED /* Constants.swift in Sources */,
+				E33591E92762892600BE1487 /* CoreData.xcdatamodeld in Sources */,
 				E3657B2E2747CF1600A9ABED /* APIInterface.swift in Sources */,
 				E33E4314274D958E00E7A6C3 /* APIcellDetails.swift in Sources */,
 				E3A9096C274A7B5500D5B7D4 /* APIViewController.swift in Sources */,
@@ -418,6 +422,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E33591E72762892600BE1487 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E33591E82762892600BE1487 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = E33591E82762892600BE1487 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E3657B082747CCB600A9ABED /* Project object */;
 }
