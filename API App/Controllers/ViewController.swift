@@ -20,8 +20,8 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  //      let dataFilePath = FileManager.default.urls(for: .documentDirectory, in:   .userDomainMask).first
-  //      print(dataFilePath!)
+        let dataFilePath = FileManager.default.urls(for: .documentDirectory, in:   .userDomainMask).first
+        print(dataFilePath!)
         categoryView.delegate = self
         categoryView.dataSource = self
         group.enter()

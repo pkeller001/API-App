@@ -101,14 +101,22 @@ func saveData() {
     }
 }
 
-//MARK: - Delete Old Care Data....
+//MARK: - Delete Old Core Data....
 func eraseOldData () {
-    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreAPIentry")
-    let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-    do {
-        try context.execute(batchDeleteRequest)
-    } catch {
-        // Error Handling
+    var fr = "CoreAPIentry"
+    deleteData()
+    fr = "LastSaved"
+    deleteData()
+    
+    func deleteData () {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: fr)
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        do {
+            try context.execute(batchDeleteRequest)
+        } catch {
+            print("Error deleting old core data - \(error)")
+        }
     }
+
 }
 
