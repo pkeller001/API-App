@@ -35,7 +35,8 @@ func fetchData() {
         print("Error retrieving coredata \(error)")
     }
     if today != last {              /* was data last saved today ?*/
-        refreshCoreData()           /* no, got get new data, build myArray & save to CD */
+        eraseOldData()              /* call func to delete old core data*/
+        refreshCoreData()      /* no, got get new data, build myArray & save to CD */
     } else {                       /* yes....*/
         let request: NSFetchRequest<CoreAPIentry> = CoreAPIentry.fetchRequest() /* setup to read from CD */
         do {
@@ -100,4 +101,14 @@ func saveData() {
     }
 }
 
+//MARK: - Delete Old Care Data....
+func eraseOldData () {
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreAPIentry")
+    let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+    do {
+        try context.execute(batchDeleteRequest)
+    } catch {
+        // Error Handling
+    }
+}
 

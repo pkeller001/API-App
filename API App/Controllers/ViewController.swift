@@ -50,6 +50,10 @@ class ViewController: UITableViewController {
                 apiArray.append(item)
             }
         }
+        //sort apiArray by cAPIname ignoring case
+        apiArray.sort{
+            $0.cAPIname!.caseInsensitiveCompare($1.cAPIname!) == .orderedAscending
+        }
         performSegue(withIdentifier: "sequeToAPI", sender: entry)
     }
     

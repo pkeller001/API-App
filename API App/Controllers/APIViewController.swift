@@ -35,7 +35,6 @@ class APIViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let desc = apiArray[indexPath.item].cAPIdesc
         cell.name?.text = name
         cell.desc?.text = desc
-        //    cell.textLabel?.text = name + K.hyphen + desc
         return cell
     }
     
